@@ -1,0 +1,29 @@
+{
+    "name": "serverless-form-handler",
+    "version": "1.0.0",
+    "description": "Form handling microservice with simple validation, HTML or JSON responses, and Mailgun+Slack notifications.",
+    "main": "index.js",
+    "dependencies": {
+        "@slack/webhook": "^5.0.1",
+        "axios": "^0.19.0",
+        "html-minifier": "^4.0.0",
+        "mailgun.js": "^2.0.1",
+        "useragent": "^2.3.0"
+    },
+    "devDependencies": {
+        "jest": "^24.9.0"
+    },
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/workingconcept/serverless-form-handler.git"
+    },
+    "author": "Working Concept",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/workingconcept/serverless-form-handler/issues"
+    },
+    "homepage": "https://github.com/workingconcept/serverless-form-handler"
+}

@@ -1,0 +1,42 @@
+org:
+app: form-handler
+service: form-handler
+
+provider:
+    name: aws
+    stage: ${opt:stage, 'dev'}
+    # region us-west-1 doesn't support Lambda logging, hence us-west-2
+    region: us-west-2
+    runtime: nodejs10.x
+
+functions:
+    handle:
+        handler: index.handler
+        description: "Form post endpoint."
+        timeout: 10
+        environment:
+            MAILGUN_API_KEY:
+            MAILGUN_DOMAIN:
+            SLACK_CHANNEL:
+            SLACK_ENDPOINT:
+            SITE_NAME:
+            ROOT_REDIRECT:
+            ALLOWED_ORIGINS:
+        events:
+            - http:
+                  path: /
+                  method: get
+                  cors: true
+            - http:
+                  path: /
+                  method: post
+                  cors: true
+            - http:
+                  path: /{proxy+}
+                  method: post
+                  cors: true
+
+package:
+    exclude:
+        - .ddev/**
+        - .idea/**

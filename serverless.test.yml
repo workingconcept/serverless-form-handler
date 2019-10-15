@@ -1,0 +1,10 @@
+- name: form endpoint returns 200
+  endpoint:
+      function: handle
+  request:
+      headers:
+          Foo: bar
+      body:
+          email:
+      response:
+          status: 200

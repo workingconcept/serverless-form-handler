@@ -1,0 +1,113 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #143038;
+    color: #234551;
+    font-size: 1rem;
+    font-family: system-ui, BlinkMacSystemFont, -apple-system, "Helvetica Neue",
+        sans-serif;
+}
+
+a {
+    color: #00a1d5;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0089b5;
+}
+
+h1 {
+    color: #61899b;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    margin-top: 1.5rem;
+}
+
+.btn {
+    position: relative;
+    color: #00a1d5;
+    border: 1px solid #00a1d5;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn:hover {
+    color: #0089b5;
+    border: 1px solid #0089b5;
+    padding-left: 2.5rem;
+}
+
+.btn:before {
+    position: absolute;
+    transition: left 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    bottom: 0;
+    opacity: 0;
+    content: "←";
+    top: 0.75rem;
+    left: 1.5rem;
+}
+
+.btn:hover:before {
+    opacity: 1;
+    content: "←";
+    left: 1.25rem;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.wrapper {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.little-box {
+    position: relative;
+    max-width: 360px;
+    margin: 2rem;
+    background-color: #fff;
+    padding: 2rem;
+    animation: in;
+    animation-duration: 1.25s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    transform-style: preserve-3d;
+    border-radius: 4px;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.09),
+        0 1px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+@keyframes in {
+    0% {
+        opacity: 0;
+        transform: rotate3d(-10, 0, 0, 90deg) translateY(-5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate3d(0, 0, 0, 0) translateY(0);
+    }
+}
