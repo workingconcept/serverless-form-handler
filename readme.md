@@ -1,6 +1,7 @@
 # Serverless Form Handler
 
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
+[![Actions Status](https://github.com/workingconcept/serverless-form-handler/workflows/Test/badge.svg)](https://github.com/workingconcept/serverless-form-handler/actions)
 
 Lambda function to be easily tailored and deployed with the [Serverless framework](https://serverless.com/). Features:
 
