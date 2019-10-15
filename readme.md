@@ -24,7 +24,7 @@ Configure serverless.yml if you'll be using Serverless.
 
 ```yml
 environment:
-    MAILGUN_API_KEY: #your key, starting with `key-`
+    MAILGUN_API_KEY: # your key, starting with `key-`
     MAILGUN_DOMAIN: # your domain
     SLACK_CHANNEL: # channel name including #
     SLACK_ENDPOINT: # incoming webhook endpoint
