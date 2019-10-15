@@ -1,5 +1,7 @@
 # Serverless Form Handler
 
+[![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
+
 Lambda function to be easily tailored and deployed with the [Serverless framework](https://serverless.com/). Features:
 
 -   Simple validation for required fields and honeypot for catching garbage.
@@ -38,25 +40,25 @@ Edit the array in `config/forms.js` to define each endpoint and the available fi
 ```json
 (module.exports = {
     "contact": {
-        "label": `Contact Form`,
-        "to": `hello@workingconcept.com`,
-        "from": `{email}`,
-        "subject": `Contact Form from {name}`,
+        "label": "Contact Form",
+        "to": "hello@workingconcept.com",
+        "from": "{email}",
+        "subject": "Contact Form from {name}",
         "fields": {
             "name": {
-                "label": `Name`,
+                "label": "Name",
                 "required": true
             },
             "email": {
-                "label": `Email`,
+                "label": "Email",
                 "required": true
             },
             "message": {
-                "label": `Message`,
+                "label": "Message",
                 "required": true
             },
             "fax": {
-                "label": `Fax Number`,
+                "label": "Fax Number",
                 "honeypot": true
             }
         }
@@ -115,11 +117,12 @@ If you're submitting the data via AJAX as `application/json`, errors will return
 
 200
 
-````json
+```json
 {
-  "success": true,
-  "errors": {}
-}```
+    "success": true,
+    "errors": {}
+}
+```
 
 ## Testing
 
@@ -151,7 +154,7 @@ Tests:       13 passed, 13 total
 Snapshots:   0 total
 Time:        1.652s
 Ran all test suites.
-````
+```
 
 ## Deploying
 
@@ -179,7 +182,7 @@ If you'd like to set up a custom domain in the AWS API gateway, this article wil
 
 ## Support
 
-No guarantees, but I'll try and do my best to help as I have time!
+No guarantees, but [submit an issue](https://github.com/workingconcept/serverless-form-handler/issues) I'll try and do my best to help as I have time!
 
 ## Contributing
 
