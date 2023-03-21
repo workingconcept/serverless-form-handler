@@ -38,8 +38,8 @@ environment:
 
 Edit the array in `config/forms.js` to define each endpoint and the available fields. A simple contact form might look like this:
 
-```json
-(module.exports = {
+```js
+module.exports = {
     "contact": {
         "label": "Contact Form",
         "to": "hello@workingconcept.com",
@@ -64,7 +64,7 @@ Edit the array in `config/forms.js` to define each endpoint and the available fi
             }
         }
     }
-})
+}
 ```
 
 The `from` and `subject` values can use special placeholders `{var}`, where `var` will be substituted with the value of a submitted field name.
